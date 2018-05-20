@@ -20,6 +20,28 @@
     <Content Remove="ClientApp\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="ClientApp\app\directives\dynamic-field.directive.ts" />
+    <None Remove="ClientApp\app\dynamic-form\components\form-button\form-button.component.ts" />
+    <None Remove="ClientApp\app\dynamic-form\components\form-input.component.ts" />
+    <None Remove="ClientApp\app\dynamic-form\components\form-select.ts" />
+    <None Remove="ClientApp\app\dynamic-form\dynamic-form.component.ts" />
+    <None Remove="ClientApp\app\dynamic-form\dynamic-form.module.ts" />
+    <None Remove="ClientApp\app\model\field-config.interface.ts" />
+    <None Remove="ClientApp\app\model\field.interface.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\app\directives\dynamic-field.directive.ts" />
+    <TypeScriptCompile Include="ClientApp\app\dynamic-form\components\form-button\form-button.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\dynamic-form\components\form-input\form-input.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\dynamic-form\components\form-select\form-select.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\dynamic-form\dynamic-form.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\dynamic-form\dynamic-form.module.ts" />
+    <TypeScriptCompile Include="ClientApp\app\model\field-config.interface.ts" />
+    <TypeScriptCompile Include="ClientApp\app\model\field.interface.ts" />
+  </ItemGroup>
+
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">
